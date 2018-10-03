@@ -78,16 +78,16 @@ public class Board {
             }
         } while (repeatLoop);
 
-        System.out.println("Please enter the snake's starting x position(0-50):");
+        System.out.println("Please enter the snake's starting x position(0-board's width):");
         int headX = 0;
         repeatLoop = true;
         do {
             try {
                 headX = Integer.parseInt(reader.readLine());
-                if (headX >= 0 && headX <= 50) {
+                if (headX >= 0 && headX <= width) {
                     repeatLoop = false;
                 } else {
-                    System.out.println("Please enter the snake's starting x position(0-50):");
+                    System.out.println("The value must be greater than 0 and less than than board's width :");
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Only numbers are permitted! Try again.");
@@ -95,16 +95,16 @@ public class Board {
         } while (repeatLoop);
 
 
-        System.out.println("Please enter the snake's starting y position(0-50):");
+        System.out.println("Please enter the snake's starting y position(0-board's height):");
         int headY = 0;
         repeatLoop = true;
         do {
             try {
                 headY = Integer.parseInt(reader.readLine());
-                if (headY >= 0 && headY <= 50) {
+                if (headY >= 0 && headY <= height) {
                     repeatLoop = false;
                 } else {
-                    System.out.println("Please enter the snake's starting y position(0-50):");
+                    System.out.println("The value must be greater than 0 and less than board's height:");
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Only numbers are permitted! Try again.");
